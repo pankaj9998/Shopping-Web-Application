@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/fontawesome.min.css}">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section>
+	<div class="container mt-5 p-5">
+		<div class="row justify-content-center align-items-center">
+			<!-- Image Column -->
+			<div class="col-md-6 mb-4 mb-md-0">
+				<img th:src="@{/img/ecom.png}" alt="E-commerce" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover;">
+			</div>
+
+			<!-- Login Form Column -->
+			<div class="col-md-6">
+				<div class="card shadow-sm p-4 bg-white rounded">
+					<div class="card-header bg-white border-0 mb-3">
+						<h3 class="text-center fw-bold">Login</h3>
+
+						<!-- Error Alert -->
+						<div th:if="${param.error}" class="alert alert-danger text-center mt-3">
+							<th:block th:if="${session.SPRING_SECURITY_LAST_EXCEPTION != null}">
+								[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]
+							</th:block>
+						</div>
+
+						<!-- Logout Alert -->
+						<div th:if="${param.logout}" class="alert alert-success text-center mt-3">
+							Logout successfully
+						</div>
+					</div>
+
+					<div class="card-body">
+						<form action="/login" method="post">
+							<div class="mb-3">
+								<label class="form-label">Email</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+									<input type="email" class="form-control" name="username" placeholder="Enter your email" required>
+								</div>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Password</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fa fa-lock"></i></span>
+									<input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-primary w-100">Login</button>
+						</form>
+					</div>
+
+					<div class="card-footer text-center bg-white border-0 mt-3">
+						<a href="/forgot-password" class="text-decoration-none">Forgot Password?</a>
+						<div class="mt-2">
+							Don?t have an account?
+							<a href="/register" class="text-decoration-none fw-semibold">Create one</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>
