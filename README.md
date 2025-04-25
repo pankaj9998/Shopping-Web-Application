@@ -1,8 +1,8 @@
 # 🛍️ E-Commerce Shopping Web Application
 
 A full-featured **E-Commerce Web Application** built using **React JS** for the frontend, **Spring Boot** for the backend, and **MySQL** as the database. This application includes both **user and admin panels**, **payment integration**, **email functionality**, **security**, and much more.
+![E-Commerce Screenshot](./Screenshot_127.png)
 
-![E-Commerce Screenshot](https://via.placeholder.com/1000x400.png?text=E-Commerce+Web+App+Demo)
 
 ---
 
@@ -67,3 +67,4 @@ ecommerce-project/
 │   ├── package.json
 │   └── ...
 ├── README.md
+├── Screenshot (127).png     # Screenshot added here
