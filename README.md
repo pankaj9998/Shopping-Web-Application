@@ -52,19 +52,4 @@ A full-featured **E-Commerce Web Application** built using **React JS** for the 
 | React JS      | Spring Boot   | MySQL    | Spring Security, JWT | Stripe/Razorpay | Postman, Git, VS Code |
 | HTML/CSS/JS   | RESTful APIs  |          | Email Auth & OTP |           |                |
 
----
 
-## 📂 Folder Structure
-
-```bash
-ecommerce-project/
-├── backend/                 # Spring Boot API
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-├── frontend/                # React Application
-│   ├── src/
-│   ├── package.json
-│   └── ...
-├── README.md
-├── Screenshot (127).png     # Screenshot added here
